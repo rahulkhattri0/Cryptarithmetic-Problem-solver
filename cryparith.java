@@ -1,7 +1,4 @@
-/*
-Uses a bactracking approach to solve the 
-Cryptarithmetic problem.
- */
+
 import java.util.*;
 public class cryparith {
     static boolean flag = false;
