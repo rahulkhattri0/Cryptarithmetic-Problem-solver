@@ -19,6 +19,7 @@ public class cryparith {
             }
             int res = makenum(map,result);
             if(sum==res){
+                flag=true;
                 System.out.println(map);
             }
             return;
@@ -55,13 +56,14 @@ public class cryparith {
         }
         String unique = sb.toString();
         System.out.println("Unique: "+unique);
+        if(unique.length()>10) return false;
         boolean used[] = new boolean[10];
         helper(map,unique,used,words,result,0);
         return flag;
     }
     public static void main(String[] args) {
-        String words[] = {"SEND","MORE"};
-        String res = "MONEY";
-        isSolvable(words, res);
+        String words[] = {"ABCD","EFGH"};
+        String res = "IJKMN";
+        System.out.println(isSolvable(words, res));
     }
 }
