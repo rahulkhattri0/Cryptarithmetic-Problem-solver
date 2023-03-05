@@ -62,8 +62,8 @@ public class cryparith {
         return flag;
     }
     public static void main(String[] args) {
-        String words[] = {"ABCD","EFGH"};
-        String res = "IJKMN";
+        String words[] = {"EAT","THAT"};
+        String res = "APPLE";
         System.out.println(isSolvable(words, res));
     }
 }
