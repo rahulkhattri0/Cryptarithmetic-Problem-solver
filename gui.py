@@ -22,14 +22,16 @@ def validate():
     res=res.upper()
     l = string.split(sep=",")
     if(len(l)>0 and res!=""):
+      loadingLabel=Label(text="getting your result....",bg="#c7cee8")
       #starting this in a background thread coz else this will keep executing in the main thread and block it after few seconds.
-      bgThread = threading.Thread(target=submit,args=(l,res))
-      bgThread.start()
-      
+      bgThread = threading.Thread(target=submit,args=(l,res,loadingLabel))
+      bgThread.start() 
     else:
        messagebox.showerror("Error!","Please fill out both the fields")
-def submit(l,res):
+def submit(l,res,load):
+   load.place(x=220,y=300)
    print(ob.isSolvable(l,res))
+   load.place_forget()
 #menu bar
 def abtCmd():
     about = Toplevel()
