@@ -2,4 +2,4 @@
  ## 🚵 To-Do
  ### 📌<del>Build the algo 💻 </del>
  ### 📌 <del>convert java algo to python</del> 🥵
- ### 📌build a GUI interface using tkinter in python 🐍
+ ### 📌build a GUI interface using tkinter in python 🐍(IN PROGRESS)
