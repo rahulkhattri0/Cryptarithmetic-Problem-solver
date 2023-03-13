@@ -1,6 +1,12 @@
+"""
+complexity of this algo O(10^length of unique string)
+for example: In the case of Send,More and Money
+The Unique string will be SENDMORY,its length is 8,so the complexity is O(10^8)
+"""
 class cryp:
     def __init__(self) -> None:
         self.flag = False
+        self.resList = []
     def makenum(self,map:dict,str:str):
         s = ""
         for i in str:
@@ -16,7 +22,10 @@ class cryp:
             res = self.makenum(map,result)
             if(sum==res):
                 self.flag = True
-                print(map)
+                ans=[]
+                for i in map:
+                    ans.append(i + ": " +map[i].__str__())
+                self.resList.append(ans)
             return
         ch = unique[target]
         for i in range(0,10):
@@ -46,9 +55,10 @@ class cryp:
         self.helper(map,unique,used,words,result,target=0)
         print(len(map))
         return self.flag
-
-words = ["SCOOBY","DUTE"]
-res = "BUSTED"
-ob = cryp()
-print(ob.isSolvable(words,res))
-                
+if __name__=='__main__':
+    words = ["SEND","MORE"]
+    res = "MONEY"
+    ob = cryp()
+    print(ob.isSolvable(words,res))
+        
+                        
